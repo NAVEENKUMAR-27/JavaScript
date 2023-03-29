@@ -1,0 +1,91 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Table</title>
+         
+        
+    </head>
+    <body>
+        <form>
+            <table>
+                    <thead>
+                        <tr>
+                            <td><input type="number" id="item" name="item" placeholder="Enter your value"/></td>
+                            <td></td>
+                            <td> <td><input type="button" id="btn" name="item_qty"  onclick="nk()"value="Add"/></td></td>
+                            <td></td>
+                            <td><input type="button" name="to" id="to" onclick="d()" value="Total"></td>
+                        </tr>
+                    </thead>
+                    </table>
+                    <br> <br> 
+                    <table border="2">
+                    <thead>
+                        <tr>
+                            <th>S.NO</th>
+                            <th>Add</th>
+                            <th>Remove</th>
+                        </tr>
+                    </thead>
+                    
+                    <tbody id="tab">
+    
+
+                    </tbody>
+                         
+            </table>
+                <div id="divid">
+                     
+                </div>
+        </form>
+
+
+
+        <script>
+                var va=[];
+                var result=document.getElementById("divid");
+                
+                
+                function nk(){
+                    var item=document.getElementById("item").value
+                    //   var to=item*2;
+                    // va.push(to);
+                    va.push(item);
+                    document.getElementById("item").value="";
+                
+                    add();
+                }
+
+                function add(){
+                    var n="";
+                    var sl=0;
+                    
+                    va.forEach(function(value,index){
+                        sl+=1;
+                        n+='<tr><td>'+sl+'</td><td>'+value+'</td><td><a onclick="rem('+index+')">Remove</a></td></tr>';
+
+                    })  
+                    document.getElementById("tab").innerHTML=n;
+                      
+                }
+                function rem(id){
+                    va.splice(id,1);
+                        add()
+                        }
+
+                  function d()  
+                    {
+                      var sum=0;
+                    va.forEach((value)=>(sum+=value)
+                               );
+                    result.innerHTML=sum;
+                     
+                    } 
+                                      
+        </script>
+        
+    </body>
+    </html>

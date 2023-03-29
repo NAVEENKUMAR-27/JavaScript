@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task3</title>
+</head>
+<body>
+
+
+
+  <input type="text" id="txt" name="txt" value=""/><br>
+    <input type="text" id="txt1" name="txt1" value=""/><br>
+
+
+    <input type="button" id="btn" name="btn" value="Click" onclick="equal()"/>
+
+    <!-- <input type="text" id="v1" name="v1" value=""/><br> 
+    <input type="text" id="v2" name="v2" value=""/> <br>
+    <button type="button" onclick="my()">Display</button>  -->
+
+    <script>
+        //  function my(){
+        //     var value1=document.getElementById("v1").value;
+        //     var value2=document.getElementById("v2").value;
+
+        //       if(value1==value1 && value2==value2 ){
+        //         alert("two values equal");
+        //       }
+
+        //       else if( value1==" "){
+        //         alert( "One of your data is empty, kindly fill it and try againsmile");
+        //        }  
+
+        //        else if(value2==null){
+        //         alert( "One of your data is empty, kindly fill it and try againsmile");
+        //        }
+
+        //       else{
+        //          alert( "One of your data is empty, kindly fill it and try againsmile");
+        //       }
+
+
+              function equal()
+        {
+        let op=document.getElementById("txt").value;
+        let vp=document.getElementById("txt1").value;
+
+        if(op !=="" && vp !=="")
+        {
+           alert("good");
+        }
+        
+        else
+        {
+            alert("Data can't be Empty");
+        }
+    }
+            
+         
+
+
+
+    </script>
+</body>
+</html>

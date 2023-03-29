@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>moodle task</title>
+    <style>
+        div{
+            margin: 0 auto;
+            width: 15%;
+        }
+        body{
+            background-color: rgb(69, 168, 168);
+        }
+        h1,h2{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <img id="img"/>
+        <h1 id="head"></h1>
+        <h2 id="age"></h2>
+    </div>
+
+
+    <script>
+        var a={
+    title:'Naveen Kumar',
+    imgsrc:'https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/user-profile-img.png',
+    age:'Age: 22'
+}
+    var img=document.getElementById("img");
+    var age=document.getElementById("age");
+    var heading=document.getElementById("head");
+
+    img.setAttribute("src",a.imgsrc);
+    heading.textContent=a.title;
+    age.textContent=a.age;
+
+    </script>
+</body>
+</html>

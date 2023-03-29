@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add cart</title>
+</head>
+<body>
+     
+           <table>
+              <tbody>
+                   <tr>
+                    <td><label>Items</label></td>
+                    <td><input type="text" id="item_name" name="item_name" placeholder="Enter your item"/></td>
+                   </tr>
+                   <tr>
+                    <td><label>Qty</label></td>
+                    <td><input type="number" id="item_qty" name="item_qty" placeholder="Enter your item Qty"/></td>
+                   </tr>
+
+                   <tr>
+                    <td><label>Rate</label></td>
+                    <td><input type="number" id="item_rate" name="item_rate" placeholder="Enter your item rate"/></td>
+                   </tr>
+                   <tr>
+                     <td></td>
+                    <td><input type="button" id="btn" name="btn" onclick="add_det()" value="Add"/></td>
+                   </tr>
+              </tbody>
+                      
+           </table>
+
+           <h3>Add cart</h3>
+      <table border="2">
+          <thead>
+              <th>S.No</th>
+              <th>Item</th>
+              <th>Qty</th>
+              <th>Rate</th>
+              <th>Total Amount</th>
+              <th>Remove</th>
+          </thead>
+          <tbody id="ta1">
+
+          </tbody>
+      </table>
+
+      <script>
+         var cart=[];
+         var toamt;
+
+
+         function add_det(){
+            var item_name=document.getElementById("item_name").value;
+            cart.push(item_name);
+            document.getElementById("item_name").value="";
+
+            var qty_name=document.getElementById("item_qty").value;
+            cart.push(qty_name);
+            document.getElementById("item_qty").value="";
+
+            var rate=document.getElementById("item_rate").value;
+            cart.push(rate);
+            document.getElementById("item_rate").value="";
+            
+            var total=qty_name*rate;
+            cart.push(total);
+             
+            shop_list();
+         }
+         
+         function shop_list(){
+             var dash="";
+             var sno=0;
+             cart.forEach(function(value,index){
+                sno+=1;
+
+                dash+='<tr><td>'+sno+'</td><td>'+value+'</td><td>'+value+'</td><td>'+value+'</td><td>'+value+'</td><td><a onclick="re('+index+')">Remove</a></td></tr>';
+
+             })
+             document.getElementById("ta1").innerHTML=dash;
+         }
+
+         function re(id){
+             cart.splice(id,1);
+             shop_list();
+         }
+
+      </script>
+</body>
+</html>
+
+
+  

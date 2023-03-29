@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+<input type="text" id="nm" value="" name="nm" placeholder="Enter a value" onkeyup="check()"/>
+
+
+<script>
+    function check()
+    {
+        var a=document.getElementById("nm").value;
+
+        if(a==parseInt(a)){
+            alert("Data's are equal")
+        }
+        else{
+            alert("Please enter a valid integer.")
+        }
+        
+    }
+
+
+</script>
+
+
+</body>
+</html>
+

@@ -1,0 +1,1 @@
+console.log(rand(20,1));

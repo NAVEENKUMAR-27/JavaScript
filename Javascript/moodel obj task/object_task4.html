@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tomato pastha</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+    <style>
+        img{
+            width: 40%;
+        }
+        h1{
+            font-family: 'Pacifico', cursive;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+     <div>
+    <h1 id="head"></h1>
+    <img id="img"/>
+    </div>
+    
+    <div>
+    <ul id="il"></ul>
+    </div>
+
+    <script>
+        let a={
+            title:"Tomato Pasta",
+            imgSrc:"https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/recipe-img.png",
+            ingredients:["Pasta", "Oil", "Onions", "Salt", "Tomato Pasta Sauce", "Cheese"]
+        };
+
+    let head=document.getElementById("head");
+    let img=document.getElementById("img");
+    let ulist=document.getElementById("il");
+
+    head.textContent=a.title;
+    img.setAttribute("src",a.imgSrc);
+    
+
+    for(var i of a.ingredients){
+        var list=document.createElement("li");
+        list.textContent=i;
+        ulist.appendChild(list);
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+.input{
+    height:40px;
+    width:35px;
+}
+.div{
+    border:2px solid white;
+    width:20rem;
+    justify-content: center;  
+    margin-left: 25re;
+}

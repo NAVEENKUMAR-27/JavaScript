@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+</head>
+<body>
+    <form>
+        <input type="text" id="stock" name="txt" placeholder="enter value"/>
+        <input type="button" id="btn" name="btn" onclick="add_item()" value="submit"/>
+        <table border="1" id="tab1">
+            <thead>
+                <tr>
+                    <th>S.No</th>
+                    <th>Name</th>
+                    <th>Remove</th>
+                </tr>
+            </thead>
+             <tbody id="tbody1">
+   
+             </tbody>
+        </table>
+    </form>
+
+     <script>
+        var new_item=[];
+        function add_item(){
+           var stock=document.getElementById("stock").value;
+           new_item.push(stock);
+           document.getElementById("stock").value="";
+           get_1();
+        }
+
+        function get_1(){
+            var n="";
+            var numb=0;
+            new_item.forEach(function(value,index){
+            numb+=1;
+
+            n+='<tr><td>'+numb+'</td><td>'+value+'</td><td><a onclick="remove_1('+index+')"> Remove</a></td></tr>';
+            })
+            document.getElementById("tbody1").innerHTML=n;
+        }
+        function remove_1(id){
+            new_item.splice(id,1);
+            get_1();
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+     </script>
+         
+</body>
+</html>

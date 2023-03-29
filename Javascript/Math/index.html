@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math</title>
+</head>
+<body>
+    <label>Password</label>
+    <input type="password" id="pass" name="pass" value=""> <br>
+    <input type="button" id="btn" name="btn"  onclick="valid()"value="Check">
+    
+        <span id="sp1"></span>
+
+    <script>
+        function valid()
+        {
+        var pass=document.getElementById("pass").value;
+        var sp1=document.getElementById("sp1");
+        var ptn=new RegExp (/^[A-z0-9@#$]{8.12}$/);
+       
+        if(ptn.test(pass)){
+
+            alert("Password is created");
+            sp1.innerHTML="Your new password is"+'<br>'+pass;
+            sp1.style.color="green";
+        }
+        else{
+            alert("Requirement is not ok");
+            sp1.innerHTML="invalid Password is"+'<br>'+pass;
+            sp1.style.color="red";
+        }
+      
+    }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>date </title>
+</head>
+<body>
+    <form>
+        <input type="date" id="date" name="date" />
+        <input type="button" id="bt" name="bt" value="convert" onclick="my()"/>
+    </form>
+    <h1 id="hid"></h1>
+    <h1 id="bid"></h1>
+    
+
+    <script>
+        function my(){
+            var dt=document.getElementById("date").value;
+            var h=document.getElementById("hid");
+             var now=new Date(dt);
+             var mydate=now.getDate();
+             var mymon=now.getMonth()+1;
+             var myyear=now.getFullYear();
+            var print=mydate+'*'+mymon+'*'+myyear;
+             h.innerText=print;
+            document.getElementById("bid").innerText=mydate+'-'+mymon+'-'+myyear;
+            h.innerText=p;
+        }
+    </script>
+    
+</body>
+</html>

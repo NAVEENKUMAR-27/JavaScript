@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task1</title>
+</head>
+<body>
+  <form>
+    <label>Mobile No</label>
+    <input type="text" id="us" name="us" placeholder="Enter your Mobile NO" value=""/> <br><br>
+     <input type="button" id="btn" name="btn" value="click" onclick="my()"/>
+      <div id="divid">
+
+      </div>
+      <div id="divid1">
+
+      </div>
+  </form>
+
+  <script>
+    
+
+     function my() {
+      var user=document.getElementById("us").value;  
+      var pt=(/^[6-9]{1}[0-9]{9}$/);
+     
+      var tst=document.getElementById("divid"); 
+      
+
+     if(pt.test(user)){
+        tst.innerHTML="Valid mobile number";
+        tst.style.color="green";
+        
+     } 
+     
+     
+    else{
+      tst.innerHTML="invalid invalid check";
+        tst.style.color="red";
+    } 
+     }
+  </script>
+
+
+</body>
+</html>

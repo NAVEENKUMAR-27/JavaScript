@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>moodle</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="div1">
+        <form>
+            <table>
+                <tbody>
+                    <tr>
+                         <td><label>Name:</label></td>
+                         <td><input type=text id="name" name="name" value="" placeholder="Your name"/> </td>
+                   </tr>
+                      <br>   
+                    <tr>
+                          <td><label>Email:</label></td>
+                          <td><input type="email" id="email" name="email" value="" placeholder="your email"/></td>
+                   </tr>
+                 
+                   <tr>
+                       <td><label>password:</label></td>
+                       <td><input type="password" id="pass" name="pass" value="" /></td>
+                  </tr>
+
+                   <tr>
+                    <td><label>Phone number:</label></td>
+                    <td><input type="number" id="number" name="number" value=""/></td>
+                  </tr>
+
+                  <tr>
+                    <td><label>Gender</label></td>
+                    <td><input type="radio" id="radio_male" name="gender" value="Male"/> Male</td>
+                    <td><input type="radio" id="radio_female" name="gender" value="Female"/> Female</td>
+                    <td><input type="radio" id="radio_other" name="gender" value="Other"/> Other</td>
+                </tr>
+                       
+                <tr>
+                      <td></td>
+                      <td>
+                      <select>
+                        <option>Language</option>
+                        <option id="lan1">Tamil</option>
+                        <option id="lan2">English</option>
+                        <option id="lan3">spanesh</option>
+                      </select>
+                      </td> 
+                   </tr>
+
+
+
+
+
+            
+                   <tr>
+                    <td><label>Zip Code:</label></td>
+                    <td><input type="text" id="zip" name="zip" value=""/></td>
+                   </tr>
+
+                   <tr>
+                    <td><label>About:</label></td>
+                    <td><textarea id="area" name="area"></textarea></td>
+                   </tr>
+                </tbody>
+             </table>
+
+                 <button type="button"id="btn" onclick="reg()">Regiternow</button>
+        </form>
+    </div>
+
+     <div id="divid" >
+        
+     </div>
+          
+
+
+
+
+
+     <script src="java.js"></script>
+</body>
+</html>

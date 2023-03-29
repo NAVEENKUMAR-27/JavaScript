@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <input type="number" id="num1" name="num1" value=""/><br> 
+        <input type="number" id="num2" name="num1" value=""/> <br>
+         <button type="button" onclick="plus()">+</button> <br>
+         <button type="button" onclick="min()">-</button><br>
+         <button type="button" onclick="mul()">*</button><br>
+         <button type="button" onclick="div()">/</button><br>
+
+         <div id="divid">
+
+         </div>
+    </form>
+  <script>
+        var a=document.getElementById("num1").value;
+        var b=document.getElementById("num2").value;
+        var print=document.getElementById("divid");
+
+         function plus(){
+            var a=document.getElementById("num1").value;
+            var b=document.getElementById("num2").value;
+            var print=document.getElementById("divid");
+               a=parseInt(a);
+               b=parseInt(b);
+            var c=a+b;
+            print.innerHTML=c;
+         }
+
+         function min(){
+            var a=document.getElementById("num1").value;
+            var b=document.getElementById("num2").value;
+            var print=document.getElementById("divid");
+               a=parseInt(a);
+               b=parseInt(b);
+            var c=a-b;
+            print.innerHTML=c;
+         }
+
+         function mul(){
+            var a=document.getElementById("num1").value;
+            var b=document.getElementById("num2").value;
+            var print=document.getElementById("divid");
+               a=parseInt(a);
+               b=parseInt(b);
+            var c=a*b;
+            print.innerHTML=c;
+         }
+
+         function div(){
+            var a=document.getElementById("num1").value;
+            var b=document.getElementById("num2").value;
+            var print=document.getElementById("divid");
+               a=parseInt(a);
+               b=parseInt(b);
+            var c=a/b;
+            print.innerHTML=c;
+         }
+
+
+          
+
+
+
+  </script>
+
+</body>
+</html>
